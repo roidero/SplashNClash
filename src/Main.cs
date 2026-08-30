@@ -61,9 +61,9 @@ public static class Main
             {
                 if (renderer.name == "coralReefRenderer")
                 {
-                    renderer.SortingLayer = tile.terrainRenderer.spriteRenderer.SortingLayer;//-1327643303;
-                    renderer.SortingOrder = tile.terrainRenderer.spriteRenderer.SortingOrder - 1;//-1883;
-                    modLogger.LogInfo($"Refresh, Layer: {tile.terrainRenderer.spriteRenderer.sortingLayer}, Order: {tile.terrainRenderer.spriteRenderer.sortingOrder - 1}");
+                    renderer.SortingLayer = tile.algaeRenderer.SortingLayer;//-1327643303;
+                    renderer.SortingOrder = tile.algaeRenderer.SortingOrder;//-1883;
+                    modLogger.LogInfo($"Layer: {renderer.SortingLayer}, Order: {renderer.SortingOrder}");
                     renderer.SharedMaterial = tile.terrainRenderer.spriteRenderer.SharedMaterial;
                     return;
                 }
@@ -80,9 +80,9 @@ public static class Main
                 else if (tile.data.climate != TribeType.None || tile.data.climate != TribeType.Nature) style = tile.data.climate.ToString().ToLower();
 
                 reefRenderer.Sprite = PolyMod.Registry.GetSprite("coralreef", style);
-                reefRenderer.SortingLayer = tile.terrainRenderer.spriteRenderer.SortingLayer;//-1327643303;
-                reefRenderer.SortingOrder = tile.terrainRenderer.spriteRenderer.SortingOrder - 1;//-1883;
-                modLogger.LogInfo($"Layer: {tile.terrainRenderer.spriteRenderer.sortingLayer}, Order: {tile.terrainRenderer.spriteRenderer.sortingOrder - 1}");
+                reefRenderer.SortingLayer = tile.algaeRenderer.SortingLayer;//-1327643303;
+                reefRenderer.SortingOrder = tile.algaeRenderer.SortingOrder;//-1883;
+                modLogger.LogInfo($"Layer: {reefRenderer.SortingLayer}, Order: {reefRenderer.SortingOrder}");
                 reefRenderer.SharedMaterial = tile.terrainRenderer.spriteRenderer.SharedMaterial;
             }
         }
