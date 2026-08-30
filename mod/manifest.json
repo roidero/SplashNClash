@@ -1,0 +1,15 @@
+{
+    "id": "splashnclash",
+    "name": "Splash & Clash",
+    "version": "0.1",
+    "authors": [
+        "Flint", "Bananique", "sol", "wasd_", "dirtyfrog"
+    ],
+    "dependencies": [
+        {
+            "id": "polytopia",
+            "min": "2.10.0"
+        }
+    ],
+    "description": "splish splash"
+}
