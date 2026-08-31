@@ -57,33 +57,26 @@ public static class Main
         GameObject gobj = tile.gameObject;
         if (gobj != null)
         {
-            foreach (PolytopiaSpriteRenderer renderer in gobj.GetComponents<PolytopiaSpriteRenderer>())
+            foreach (SpriteRenderer renderer in gobj.GetComponents<SpriteRenderer>())
             {
                 if (renderer.name == "coralReefRenderer")
                 {
-                    renderer.SortingLayer = tile.algaeRenderer.SortingLayer;//-1327643303;
-                    renderer.SortingOrder = tile.algaeRenderer.SortingOrder;//-1883;
-                    modLogger.LogInfo($"Layer: {renderer.SortingLayer}, Order: {renderer.SortingOrder}");
-                    renderer.SharedMaterial = tile.terrainRenderer.spriteRenderer.SharedMaterial;
                     return;
                 }
             }
 
-            PolytopiaSpriteRenderer reefRenderer = gobj.AddComponent<PolytopiaSpriteRenderer>();
+            SpriteRenderer reefRenderer = gobj.AddComponent<SpriteRenderer>();
             if (reefRenderer != null)
             {
-                reefRenderer.Init();
                 reefRenderer.name = "coralReefRenderer";
 
                 string style = "";
                 if (tile.data.Skin != SkinType.None || tile.data.Skin != SkinType.Default) style = tile.data.Skin.ToString().ToLower();
                 else if (tile.data.climate != TribeType.None || tile.data.climate != TribeType.Nature) style = tile.data.climate.ToString().ToLower();
 
-                reefRenderer.Sprite = PolyMod.Registry.GetSprite("coralreef", style);
-                reefRenderer.SortingLayer = tile.algaeRenderer.SortingLayer;//-1327643303;
-                reefRenderer.SortingOrder = tile.algaeRenderer.SortingOrder;//-1883;
-                modLogger.LogInfo($"Layer: {reefRenderer.SortingLayer}, Order: {reefRenderer.SortingOrder}");
-                reefRenderer.SharedMaterial = tile.terrainRenderer.spriteRenderer.SharedMaterial;
+                reefRenderer.sprite = PolyMod.Registry.GetSprite("coralreef", style);
+                reefRenderer.sortingLayerID = -1327643303;
+                reefRenderer.sortingOrder = -1883;
             }
         }
     }
@@ -93,7 +86,7 @@ public static class Main
         GameObject gobj = tile.gameObject;
         if (gobj != null)
         {
-            foreach (PolytopiaSpriteRenderer renderer in gobj.GetComponents<PolytopiaSpriteRenderer>())
+            foreach (SpriteRenderer renderer in gobj.GetComponents<SpriteRenderer>())
             {
                 if (renderer.name == "coralReefRenderer")
                 {
