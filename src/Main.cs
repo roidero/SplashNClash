@@ -65,7 +65,7 @@ public static class Main
                 }
             }
 
-            GameObject rendererObject = GameObject.Instantiate(tile.);
+            GameObject rendererObject = GameObject.Instantiate(tile.);//we need to add a gameobject to the tile which has a renderer rather than just a renderer cause Component.Name returns the same thing as Tile.Name
             SpriteRenderer reefRenderer = gobj.AddComponent<SpriteRenderer>();
             if (reefRenderer != null)
             {
