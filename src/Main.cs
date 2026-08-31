@@ -65,6 +65,7 @@ public static class Main
                 }
             }
 
+            GameObject rendererObject = GameObject.Instantiate(tile.);
             SpriteRenderer reefRenderer = gobj.AddComponent<SpriteRenderer>();
             if (reefRenderer != null)
             {
