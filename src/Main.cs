@@ -75,8 +75,32 @@ public static class Main
                 else if (tile.data.climate != TribeType.None || tile.data.climate != TribeType.Nature) style = tile.data.climate.ToString().ToLower();
 
                 reefRenderer.sprite = PolyMod.Registry.GetSprite("coralreef", style);
-                reefRenderer.sortingLayerID = -1327643303;
-                reefRenderer.sortingOrder = -1883;
+                reefRenderer.sortingLayerID = 0;
+                /*
+                reefRenderer.sortingOrder = tile.algaeRenderer.sortingOrder;
+                modLogger.LogInfo($"L{reefRenderer.sortingLayerID} O{reefRenderer.sortingOrder} TL{tile.terrainRenderer.SpriteRenderer.SortingLayer} TO{tile.terrainRenderer.SpriteRenderer.SortingOrder}");
+                if (tile.Improvement != null)
+                {
+                    modLogger.LogInfo($"IL{tile.Improvement.SpriteRenderer.SortingLayer} IO{tile.Improvement.SpriteRenderer.SortingOrder} IN{tile.data.improvement.type.ToString()}");
+                }*/
+            }
+        }
+    }
+
+    [HarmonyPostfix]
+    [HarmonyPatch(typeof(Tile), nameof(Tile.Depth), MethodType.Setter)]
+    private static void DepthSetter(Tile __instance, int value)
+    {
+        GameObject gobj = __instance.gameObject;
+        if (gobj != null)
+        {
+            foreach (SpriteRenderer renderer in gobj.GetComponents<SpriteRenderer>())
+            {
+                if (renderer.name == "coralReefRenderer")
+                {
+                    renderer.sortingOrder = value + 4;
+                    modLogger.LogInfo($"{value}|{renderer.sortingOrder}");
+                }
             }
         }
     }
