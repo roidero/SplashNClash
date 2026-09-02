@@ -54,36 +54,26 @@ public static class Main
 
     public static void LogNuking(Tile tile)
     {
-        GameObject gobj = tile.gameObject;
-        if (gobj != null)
+        GameObject tileObject = tile.gameObject;
+        if (tileObject != null)
         {
-            foreach (SpriteRenderer renderer in gobj.GetComponents<SpriteRenderer>())
+            if (tileObject.transform.Find("coralReefRendererObject") != null)
             {
-                if (renderer.name == "coralReefRenderer")
-                {
-                    return;
-                }
+                return;
             }
 
-            GameObject rendererObject = GameObject.Instantiate(tile.);//we need to add a gameobject to the tile which has a renderer rather than just a renderer cause Component.Name returns the same thing as Tile.Name
-            SpriteRenderer reefRenderer = gobj.AddComponent<SpriteRenderer>();
+            GameObject rendererObject = new GameObject("coralReefRendererObject");
+            rendererObject.transform.SetParent(tileObject.transform, false);
+
+            SpriteRenderer reefRenderer = rendererObject.AddComponent<SpriteRenderer>();
             if (reefRenderer != null)
             {
-                reefRenderer.name = "coralReefRenderer";
-
                 string style = "";
-                if (tile.data.Skin != SkinType.None || tile.data.Skin != SkinType.Default) style = tile.data.Skin.ToString().ToLower();
-                else if (tile.data.climate != TribeType.None || tile.data.climate != TribeType.Nature) style = tile.data.climate.ToString().ToLower();
+                if (tile.data.Skin != SkinType.None && tile.data.Skin != SkinType.Default) style = tile.data.Skin.ToString().ToLower();
+                else if (tile.data.climate != TribeType.None && tile.data.climate != TribeType.Nature) style = tile.data.climate.ToString().ToLower();
 
                 reefRenderer.sprite = PolyMod.Registry.GetSprite("coralreef", style);
                 reefRenderer.sortingLayerID = 0;
-                /*
-                reefRenderer.sortingOrder = tile.algaeRenderer.sortingOrder;
-                modLogger.LogInfo($"L{reefRenderer.sortingLayerID} O{reefRenderer.sortingOrder} TL{tile.terrainRenderer.SpriteRenderer.SortingLayer} TO{tile.terrainRenderer.SpriteRenderer.SortingOrder}");
-                if (tile.Improvement != null)
-                {
-                    modLogger.LogInfo($"IL{tile.Improvement.SpriteRenderer.SortingLayer} IO{tile.Improvement.SpriteRenderer.SortingOrder} IN{tile.data.improvement.type.ToString()}");
-                }*/
             }
         }
     }
@@ -92,31 +82,28 @@ public static class Main
     [HarmonyPatch(typeof(Tile), nameof(Tile.Depth), MethodType.Setter)]
     private static void DepthSetter(Tile __instance, int value)
     {
-        GameObject gobj = __instance.gameObject;
-        if (gobj != null)
+        GameObject tileObject = __instance.gameObject;
+        if (tileObject != null)
         {
-            foreach (SpriteRenderer renderer in gobj.GetComponents<SpriteRenderer>())
+            Transform reefTransform = tileObject.transform.Find("coralReefRendererObject");
+            if (reefTransform != null)
             {
-                if (renderer.name == "coralReefRenderer")
-                {
-                    renderer.sortingOrder = value + 4;
-                    modLogger.LogInfo($"{value}|{renderer.sortingOrder}");
-                }
+                SpriteRenderer reefRenderer = reefTransform.gameObject.GetComponent<SpriteRenderer>();
+                reefRenderer.sortingOrder = value + 2;
             }
         }
     }
 
     public static void ShowCoral(Tile tile, bool show)
     {
-        GameObject gobj = tile.gameObject;
-        if (gobj != null)
+        GameObject tileObject = tile.gameObject;
+        if (tileObject != null)
         {
-            foreach (SpriteRenderer renderer in gobj.GetComponents<SpriteRenderer>())
+            Transform reefTransform = tileObject.transform.Find("coralReefRendererObject");
+            if (reefTransform != null)
             {
-                if (renderer.name == "coralReefRenderer")
-                {
-                    renderer.enabled = show;
-                }
+                SpriteRenderer reefRenderer = reefTransform.gameObject.GetComponent<SpriteRenderer>();
+                reefRenderer.enabled = show;
             }
         }
     }
