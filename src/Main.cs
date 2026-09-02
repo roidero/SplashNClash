@@ -73,8 +73,8 @@ public static class Main
                 else if (tile.data.climate != TribeType.None && tile.data.climate != TribeType.Nature) style = tile.data.climate.ToString().ToLower();
 
                 reefRenderer.Sprite = PolyMod.Registry.GetSprite("coralreef", style);
-                reefRenderer.SortingLayer = 0;
-                reefRenderer.SharedMaterial = tile.combinedMeshRenderer.sharedMaterial;
+                reefRenderer.SortingLayer = MeshCache.TERRAIN_LAYER_ID; //nullerror
+                reefRenderer.SharedMaterial = tile.combinedMeshRenderer.sharedMaterial; //nullerror
 
                 reefRenderer.Init();
             }
