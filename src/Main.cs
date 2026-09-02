@@ -65,15 +65,18 @@ public static class Main
             GameObject rendererObject = new GameObject("coralReefRendererObject");
             rendererObject.transform.SetParent(tileObject.transform, false);
 
-            SpriteRenderer reefRenderer = rendererObject.AddComponent<SpriteRenderer>();
+            PolytopiaSpriteRenderer reefRenderer = rendererObject.AddComponent<PolytopiaSpriteRenderer>();
             if (reefRenderer != null)
             {
                 string style = "";
                 if (tile.data.Skin != SkinType.None && tile.data.Skin != SkinType.Default) style = tile.data.Skin.ToString().ToLower();
                 else if (tile.data.climate != TribeType.None && tile.data.climate != TribeType.Nature) style = tile.data.climate.ToString().ToLower();
 
-                reefRenderer.sprite = PolyMod.Registry.GetSprite("coralreef", style);
-                reefRenderer.sortingLayerID = 0;
+                reefRenderer.Sprite = PolyMod.Registry.GetSprite("coralreef", style);
+                reefRenderer.SortingLayer = 0;
+                reefRenderer.SharedMaterial = tile.combinedMeshRenderer.sharedMaterial;
+
+                reefRenderer.Init();
             }
         }
     }
@@ -88,8 +91,26 @@ public static class Main
             Transform reefTransform = tileObject.transform.Find("coralReefRendererObject");
             if (reefTransform != null)
             {
-                SpriteRenderer reefRenderer = reefTransform.gameObject.GetComponent<SpriteRenderer>();
+                PolytopiaSpriteRenderer reefRenderer = reefTransform.gameObject.GetComponent<PolytopiaSpriteRenderer>();
                 reefRenderer.sortingOrder = value + 2;
+            }
+        }
+    }
+
+    [HarmonyPostfix]
+    [HarmonyPatch(typeof(Tile), nameof(Tile.UpdateSortedSpriteRenderers))]
+    private static void AddToSortedSpriteRenderers(ref Tile __instance)
+    {
+        GameObject tileObject = __instance.gameObject;
+        if (tileObject != null)
+        {
+            Transform reefTransform = tileObject.transform.Find("coralReefRendererObject");
+            if (reefTransform != null)
+            {
+                PolytopiaSpriteRenderer reefRenderer = reefTransform.gameObject.GetComponent<PolytopiaSpriteRenderer>();
+                Il2Gen.List<PolytopiaSpriteRenderer> list = new();
+                list.Add(reefRenderer);
+                __instance.AddActive(list);
             }
         }
     }
@@ -102,7 +123,7 @@ public static class Main
             Transform reefTransform = tileObject.transform.Find("coralReefRendererObject");
             if (reefTransform != null)
             {
-                SpriteRenderer reefRenderer = reefTransform.gameObject.GetComponent<SpriteRenderer>();
+                PolytopiaSpriteRenderer reefRenderer = reefTransform.gameObject.GetComponent<PolytopiaSpriteRenderer>();
                 reefRenderer.enabled = show;
             }
         }
