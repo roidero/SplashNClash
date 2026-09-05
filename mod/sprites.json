@@ -1,4 +1,8 @@
 {
+    "coralreef__": {
+        "pixelsPerUnit": 270.336,
+        "pivot": [0.52995265, 0.5]
+    },
     "boat_tint_sailboat__": {
         "pixelsPerUnit": 700,
         "pivot": [
