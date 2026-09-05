@@ -1,15 +1,21 @@
 {
-    "id": "splashnclash",
+    "id": "splashandclash",
     "name": "Splash & Clash",
-    "version": "0.1",
+    "version": "0.0.1",
     "authors": [
-        "Flint", "Bananique", "sol", "wasd_", "dirtyfrog"
+        "flintfennekin (Lead Developer, Spriter for Sailboat, Longship, Bumper Boat, and Stinger)",
+        "=Bananique= (GLD for Units, Spriter for Galley, Guardship, and Mounted Ballista)",
+        "dirtyfrog51 (Spriter for Caravel, Cannonizer)"
+
     ],
     "dependencies": [
         {
             "id": "polytopia",
-            "min": "2.10.0"
+            "min": "2.0.0"
+        },
+        {
+            "id": "polibrary",
+            "min": "2.1"
         }
-    ],
-    "description": "splish splash"
+    ]
 }

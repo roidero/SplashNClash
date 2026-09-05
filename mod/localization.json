@@ -1,0 +1,74 @@
+{
+    "unit_names_canoe": {
+        "English": "Canoe"
+    },
+    "unit_names_sailboat": {
+        "English": "Sailboat"
+    },
+    "unit_names_carriership": {
+        "English": "Carrier Ship"
+    },
+    "unit_names_caravel": {
+        "English": "Caravel"
+    },
+    "unit_names_dhow": {
+        "English": "Dhow"
+    },
+    "unit_names_galley": {
+        "English": "Galley"
+    },
+    "unit_names_longship": {
+        "English": "Longship"
+    },
+    "unit_names_knarr": {
+        "English": "Knarr"
+    },
+    "unit_names_cog": {
+        "English": "Cog"
+    },
+    "unit_names_armoredraft": {
+        "English": "Armored Raft"
+    },
+    "unit_names_guardship": {
+        "English": "Guardship"
+    },
+    "unit_names_wavemaker": {
+        "English": "Wavemaker"
+    },
+    "unit_names_battleshipsnc": {
+        "English": "Battleship"
+    },
+    "unit_names_cannonizer": {
+        "English": "Cannonizer"
+    },
+    "unit_names_stinger": {
+        "English": "Stinger"
+    },
+    "unit_names_ballistaboat": {
+        "English": "Mounted Ballista"
+    },
+    "unit_names_wingedship": {
+        "English": "Winged Ship"
+    },
+    "unit_names_destroyership": {
+        "English": "Coast Destroyer"
+    },
+    "unit_names_carrack": {
+        "English": "Carrack"
+    },
+    "unit_names_fixerupper": {
+        "English": "Fixer-Upper"
+    },
+    "unit_names_neptunesblessing": {
+        "English": "Neptune's Blessing"
+    },
+    "unit_names_messengerofpeace": {
+        "English": "Messenger of Peace"
+    },
+    "unit_names_bumperboat": {
+        "English": "Bumper Boat"
+    },
+    "building_names_cheatpopulation": {
+        "English": "Cheat: Give Population"
+    }
+}
