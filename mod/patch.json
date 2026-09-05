@@ -1,4 +1,9 @@
 {
+	"tileEffect": {
+        "coralreef": {
+            "idx": -1
+		}
+	},
     "unitData": {
 		"warrior": {
             "embarksTo": "canoe"
