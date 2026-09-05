@@ -5,8 +5,8 @@
     "authors": [
         "flintfennekin (Lead Developer, Spriter for Sailboat, Longship, Bumper Boat, and Stinger)",
         "=Bananique= (GLD for Units, Spriter for Galley, Guardship, and Mounted Ballista)",
-        "dirtyfrog51 (Spriter for Caravel, Cannonizer)"
-
+        "dirtyfrog51 (Spriter for Caravel, Cannonizer)",
+        "wasd_ (Polyscript)"
     ],
     "dependencies": [
         {
@@ -15,7 +15,7 @@
         },
         {
             "id": "polibrary",
-            "min": "2.1"
+            "min": "2.1.4.6"
         }
     ]
 }
