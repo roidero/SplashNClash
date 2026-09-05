@@ -1,7 +1,663 @@
 {
-    "tileEffect": {
-        "coralreef": {
-            "idx": -1
-        }
-    }
+    "unitData": {
+		"warrior": {
+            "embarksTo": "canoe"
+        },
+        "archer": {
+            "embarksTo": "caravel"
+        },
+        "rider": {
+            "embarksTo": "longship"
+        },
+        "defender": {
+            "embarksTo": "armoredraft"
+        },
+        "catapult": {
+            "embarksTo": "battleshipsnc"
+        },
+        "knight": {
+            "embarksTo": "stinger"
+        },
+		"mindbender": {
+            "embarksTo": "fixerupper"
+        },
+		"swordsman": {
+            "embarksTo": "rammership"
+        },
+		"canoe": {
+			"health": 100,
+			"defence": 10,
+			"movement": 2,
+			"range": 1,
+			"attack": 0,
+			"cost": 0,
+			"hidden": true,
+			"unitAbilities": [
+				"carry",
+				"swim",
+				"water",
+				"static",
+				"stiff"
+			],
+			"weapon": 1,
+			"promotionLimit": 0,
+			"idx": -1,
+			"prefab": "boat"
+		},
+        "sailboat": {
+			"health": 100,
+			"movement": 2,
+			"range": 1,
+			"defence": 10,
+			"attack": 0,
+			"cost": 3,
+			"hidden": true,
+			"unitAbilities": [
+                "scout",
+				"swim",
+				"carry",
+				"water",
+				"static"
+			],
+			"weapon": 3,
+            "upgradesFrom": "canoe",
+			"promotionLimit": 0,
+			"idx": -1,
+            "prefab": "transportship"
+		},
+        "carriership": {
+			"health": 100,
+			"movement": 1,
+			"range": 1,
+			"defence": 20,
+			"attack": 20,
+			"cost": 2,
+			"hidden": true,
+			"unitAbilities": [
+				"stiff",
+                "dash",
+				"swim",
+				"carry",
+				"water",
+				"static"
+			],
+			"weapon": 1,
+			"promotionLimit": 0,
+			"idx": -1,
+            "upgradesFrom": "canoe",
+            "prefab": "transportship"
+		},
+		"caravel": {
+			"health": 100,
+			"movement": 2,
+			"range": 2,
+			"defence": 10,
+			"attack": 10,
+			"hidden": true,
+			"unitAbilities": [
+				"dash",
+                "scout",
+				"swim",
+				"carry",
+				"water",
+				"static"
+			],
+			"weapon": 3,
+			"promotionLimit": 0,
+			"idx": -1,
+            "prefab": "transportship"
+		},
+        "dhow": {
+			"health": 100,
+			"movement": 2,
+			"range": 2,
+			"defence": 10,
+			"attack": 25,
+			"cost": 6,
+			"hidden": true,
+			"unitAbilities": [
+				"escape",
+                "dash",
+				"swim",
+				"carry",
+				"water",
+				"static"
+			],
+			"weapon": 3,
+			"promotionLimit": 0,
+			"idx": -1,
+            "upgradesFrom": "caravel",
+            "prefab": "scoutship"
+		},
+        "galley": {
+			"health": 100,
+			"movement": 1,
+			"range": 2,
+			"defence": 20,
+			"attack": 30,
+			"cost": 8,
+			"hidden": true,
+			"unitAbilities": [
+                "dash",
+				"swim",
+				"carry",
+				"water",
+				"static"
+			],
+			"weapon": 5,
+			"promotionLimit": 0,
+			"idx": -1,
+            "upgradesFrom": "caravel",
+            "prefab": "bombership"
+		},
+        "longship": {
+			"health": 100,
+			"movement": 3,
+			"range": 1,
+			"defence": 10,
+			"attack": 0,
+			"hidden": true,
+			"unitAbilities": [
+				"swim",
+				"carry",
+				"water",
+				"static"
+			],
+			"weapon": 16,
+			"promotionLimit": 0,
+			"idx": -1,
+            "prefab": "warrior"
+		},
+        "knarr": {
+			"health": 100,
+			"movement": 4,
+			"range": 1,
+			"defence": 0,
+			"attack": 10,
+			"cost": 5,
+			"hidden": true,
+			"unitAbilities": [
+				"swim",
+				"dash",
+				"surprise",
+				"carry",
+				"water",
+				"stiff",
+				"static"
+			],
+			"weapon": 7,
+			"promotionLimit": 0,
+			"idx": -1,
+            "prefab": "rammership",
+            "upgradesFrom": "longship"
+		},
+        "cog": {
+			"health": 100,
+			"movement": 2,
+			"range": 1,
+			"defence": 20,
+			"attack": 20,
+			"cost": 5,
+			"hidden": true,
+			"unitAbilities": [
+                "sneak",
+				"creep",
+				"dash",
+				"escape",
+				"swim",
+				"carry",
+				"water",
+				"static"
+			],
+			"weapon": 16,
+			"promotionLimit": 0,
+			"idx": -1,
+            "prefab": "rammership",
+            "upgradesFrom": "longship"
+		},
+        "armoredraft": {
+			"health": 150,
+			"movement": 1,
+			"range": 1,
+			"defence": 30,
+			"attack": 0,
+			"hidden": true,
+			"unitAbilities": [
+                "stiff",
+				"swim",
+				"carry",
+				"water",
+				"static"
+			],
+			"weapon": 16,
+			"promotionLimit": 0,
+			"idx": -1,
+            "prefab": "transportship"
+		},
+        "guardship": {
+			"health": 150,
+			"movement": 2,
+			"range": 2,
+			"defence": 30,
+			"attack": 20,
+			"hidden": true,
+            "cost": 5,
+			"unitAbilities": [
+				"swim",
+				"carry",
+				"dash",
+				"water",
+				"polib_homesick",
+				"static"
+			],
+			"weapon": 5,
+			"promotionLimit": 0,
+			"idx": -1,
+            "prefab": "bombership",
+            "upgradesFrom": "armoredraft"
+		},
+        "wavemaker": {
+			"health": 150,
+			"movement": 1,
+			"range": 0,
+			"defence": 30,
+			"attack": 20,
+			"hidden": true,
+            "cost": 5,
+			"unitAbilities": [
+                "stiff",
+                "stomp",
+				"swim",
+				"carry",
+				"water",
+				"static"
+			],
+			"weapon": 16,
+			"promotionLimit": 0,
+			"idx": -1,
+            "prefab": "transportship",
+            "upgradesFrom": "armoredraft"
+		},
+        "battleshipsnc": {
+			"health": 150,
+			"movement": 1,
+			"range": 2,
+			"defence": 20,
+			"attack": 40,
+			"hidden": true,
+			"unitAbilities": [
+				"swim",
+				"carry",
+				"water",
+				"static"
+			],
+			"weapon": 5,
+			"promotionLimit": 0,
+			"idx": -1,
+            "prefab": "battleship"
+		},
+        "bombership": {
+			"health": 150,
+			"movement": 1,
+			"range": 3,
+			"defence": 0,
+			"attack": 35,
+			"hidden": true,
+            "cost": 8,
+			"unitAbilities": [
+                "splash",
+                "stiff",
+				"swim",
+				"carry",
+				"water",
+				"static"
+			],
+			"weapon": 5,
+			"promotionLimit": 0,
+            "upgradesFrom": "battleshipsnc"
+		},
+        "cannonizer": {
+			"health": 150,
+			"movement": 1,
+			"range": 2,
+			"defence": 30,
+			"attack": 60,
+			"hidden": true,
+            "cost": 15,
+			"unitAbilities": [
+				"swim",
+				"carry",
+				"water",
+				"static"
+			],
+			"weapon": 5,
+			"promotionLimit": 0,
+			"idx": -1,
+            "prefab": "transportship",
+            "upgradesFrom": "battleshipsnc"
+		},
+        "stinger": {
+			"health": 150,
+			"movement": 2,
+			"range": 1,
+			"defence": 10,
+			"attack": 35,
+			"hidden": true,
+			"unitAbilities": [
+                "persist",
+				"dash",
+				"swim",
+				"carry",
+				"water",
+				"static"
+			],
+			"weapon": 12,
+			"promotionLimit": 0,
+			"idx": -1,
+            "prefab": "transportship"
+		},
+        "ballistaboat": {
+			"health": 150,
+			"movement": 1,
+			"range": 2,
+			"defence": 10,
+			"attack": 35,
+			"hidden": true,
+            "cost": 8,
+			"unitAbilities": [
+                "persist",
+				"dash",
+				"swim",
+				"carry",
+				"water",
+				"static"
+			],
+			"weapon": 3,
+			"promotionLimit": 0,
+			"idx": -1,
+            "prefab": "transportship",
+            "upgradesFrom": "stinger"
+		},
+        "wingedship": {
+			"health": 150,
+			"movement": 2,
+			"range": 1,
+			"defence": 0,
+			"attack": 30,
+			"hidden": true,
+            "cost": 15,
+			"unitAbilities": [
+                "persist",
+                "escape",
+				"dash",
+				"swim",
+				"carry",
+				"water",
+				"static",
+				"doubleattack"
+			],
+			"weapon": 7,
+			"promotionLimit": 0,
+			"idx": -1,
+            "prefab": "rammership",
+            "upgradesFrom": "stinger"
+		},
+		"rammership": {
+			"health": 150,
+			"defence": 30,
+			"movement": 2,
+			"range": 1,
+			"attack": 30,
+			"hidden": true,
+			"unitAbilities": [
+				"carry",
+				"swim",
+				"water",
+				"static",
+				"dash"
+			],
+			"promotionLimit": 0,
+			"upgradesFrom": "none"
+		},
+		"destroyership": {
+			"health": 150,
+			"defence": 20,
+			"movement": 3,
+			"range": 1,
+			"attack": 40,
+			"cost": 8,
+			"hidden": true,
+			"unitAbilities": [
+				"carry",
+				"swim",
+				"water",
+				"static",
+				"dash",
+				"stiff"
+			],
+			"weapon": 2,
+			"promotionLimit": 0,
+			"idx": -1,
+			"prefab": "rammership",
+			"upgradesFrom": "rammership"
+		},
+		"carrack": {
+			"health": 150,
+			"defence": 45,
+			"movement": 2,
+			"range": 1,
+			"attack": 15,
+			"cost": 7,
+			"hidden": true,
+			"unitAbilities": [
+				"carry",
+				"swim",
+				"water",
+				"static",
+				"polib_lazy"
+			],
+			"weapon": 16,
+			"promotionLimit": 0,
+			"idx": -1,
+			"prefab": "battleship",
+			"upgradesFrom": "rammership"
+		},
+		"fixerupper": {
+			"health": 100,
+			"defence": 20,
+			"movement": 2,
+			"range": 1,
+			"attack": 0,
+			"hidden": true,
+			"unitAbilities": [
+				"carry",
+				"swim",
+				"water",
+				"static",
+				"stiff",
+				"heal"
+			],
+			"weapon": 4,
+			"promotionLimit": 0,
+			"idx": -1,
+			"prefab": "transportship"
+		},
+		"neptunesblessing": {
+			"health": 100,
+			"defence": 0,
+			"movement": 2,
+			"range": 1,
+			"attack": 0,
+			"cost": 8,
+			"hidden": true,
+			"unitAbilities": [
+				"carry",
+				"swim",
+				"water",
+				"static",
+				"stiff",
+				"autoheal",
+				"heal",
+				"dash"
+			],
+			"weapon": 4,
+			"promotionLimit": 0,
+			"idx": -1,
+			"prefab": "ship",
+			"upgradesFrom": "fixerupper"
+		},
+		"messengerofpeace": {
+			"health": 100,
+			"defence": 10,
+			"movement": 1,
+			"range": 2,
+			"attack": 0,
+			"cost": 10,
+			"hidden": true,
+			"unitAbilities": [
+				"carry",
+				"swim",
+				"water",
+				"static",
+				"stiff",
+				"convert"
+			],
+			"weapon": 4,
+			"promotionLimit": 0,
+			"idx": -1,
+			"prefab": "boat",
+			"upgradesFrom": "fixerupper"
+		},
+		"scoutship": {
+			"health": 100,
+			"defence": 10,
+			"movement": 3,
+			"range": 2,
+			"attack": 20,
+			"cost": 4,
+			"hidden": true,
+			"upgradesFrom": "transportship",
+			"unitAbilities": [
+				"dash",
+				"carry",
+				"swim",
+				"water",
+				"static"
+			]
+		},
+		"bumperboat": {
+			"health": 100,
+			"movement": 2,
+			"range": 1,
+			"defence": 20,
+			"attack": 20,
+			"cost": 5,
+			"hidden": true,
+			"upgradesFrom": "transportship",
+			"unitAbilities": [
+				"dash",
+				"swim",
+				"carry",
+				"water",
+				"static"
+			],
+			"weapon": 1,
+			"promotionLimit": 0,
+			"idx": -1,
+			"prefab": "warrior"
+		},
+		"testunit": {
+			"health": 1000,
+			"movement": 10,
+			"range": 10,
+			"defence": 1000,
+			"attack": 1000,
+			"cost": 0,
+			"unitAbilities": [
+				"dash",
+				"land",
+				"static"
+			],
+			"weapon": 0,
+			"promotionLimit": 0,
+			"idx": -1,
+			"prefab": "bunny"
+		}
+		
+    },
+    "techData": {
+        "basic": {
+            "unitUnlocks": [
+				"+canoe",
+                "+sailboat",
+                "+carriership",
+                "+caravel",
+                "+dhow",
+                "+galley",
+				"+longship",
+				"+knarr",
+				"+cog",
+				"+armoredraft",
+				"+guardship",
+				"+wavemaker",
+				"+battleshipsnc",
+				"+bombership",
+				"+scoutship",
+				"+rammership",
+				"+cannonizer",
+				"+stinger",
+				"+ballistaboat",
+				"+wingedship",
+				"+destroyership",
+				"+carrack",
+				"+fixerupper",
+				"+neptunesblessing",
+				"+messengerofpeace",
+				"+bumperboat",
+				"+testunit"
+
+			],
+			"improvementUnlocks": [
+				"cheatpopulation"
+			]
+        },
+		"sailing": {
+			"unitUnlocks": [
+				"-scoutship"
+			]
+		},
+		"navigation": {
+			"unitUnlocks": [
+				"-bombership"
+			]
+		},
+		"ramming": {
+			"unitUnlocks": [
+				"-rammership"
+			],
+			"defenceBonusUnlocks": {
+				"water": 15
+			}
+		},
+		"aquatism": {
+			"defenceBonusUnlocks": {
+				"ocean": 15
+			}
+		}
+    },
+	"improvementData": {
+		"cheatpopulation": {
+			"cost": 0,
+			"idx": -1,
+			"improvementAbilities": [
+				"discrete",
+				"freelance"
+			],
+			"rewards": [
+                {
+                    "population": 100
+                }
+            ]
+		}
+	}
 }

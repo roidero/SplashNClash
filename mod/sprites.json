@@ -1,0 +1,268 @@
+{
+    "boat_tint_sailboat__": {
+        "pixelsPerUnit": 700,
+        "pivot": [
+            0.38,
+            0.58
+        ]
+    },
+    "boat_sailboat_outline__": {
+        "pixelsPerUnit": 600,
+        "pivot": [
+            0.42,
+            0.56
+        ]
+    },
+    "boat_sailboat__": {
+        "pixelsPerUnit": 700,
+        "pivot": [
+            0.4,
+            0.59
+        ]
+    },
+    "boat_tint_caravel__": {
+        "pixelsPerUnit": 1000,
+        "pivot": [
+            0.5,
+            0.5
+        ]
+    },
+    "boat_caravel_outline__": {
+        "pixelsPerUnit": 900,
+        "pivot": [
+            0.5,
+            0.5
+        ]
+    },
+    "boat_caravel__": {
+        "pixelsPerUnit": 1000,
+        "pivot": [
+            0.5,
+            0.5
+        ]
+    },
+    "battleship_tint_galley__": {
+        "pixelsPerUnit": 2000,
+        "pivot": [
+            0.4,
+            0.55
+        ]
+    },
+    "battleship_galley_outline__": {
+        "pixelsPerUnit": 1900,
+        "pivot": [
+            0.4,
+            0.55
+        ]
+    },
+    "battleship_galley__": {
+        "pixelsPerUnit": 2000,
+        "pivot": [
+            0.4,
+            0.55
+        ]
+    },
+    "battleship_tint_guardship__": {
+        "pixelsPerUnit": 2000,
+        "pivot": [
+            0.39,
+            0.53
+        ]
+    },
+    "battleship_guardship_outline__": {
+        "pixelsPerUnit": 1900,
+        "pivot": [
+            0.39,
+            0.53
+        ]
+    },
+    "battleship_guardship__": {
+        "pixelsPerUnit": 2000,
+        "pivot": [
+            0.39,
+            0.53
+        ]
+    },
+    "boat_tint_cannonizer__": {
+        "pixelsPerUnit": 800,
+        "pivot": [
+            0.5,
+            0.4
+        ]
+    },
+    "boat_cannonizer_outline__": {
+        "pixelsPerUnit": 700,
+        "pivot": [
+            0.5,
+            0.4
+        ]
+    },
+    "boat_cannonizer__": {
+        "pixelsPerUnit": 800,
+        "pivot": [
+            0.5,
+            0.4
+        ]
+    },
+    "seayard__0": {
+        "pixelsPerUnit": 1500,
+        "pivot": [
+            0.5,
+            0.23
+        ]
+    },
+    "seayard__1": {
+        "pixelsPerUnit": 1500,
+        "pivot": [
+            0.5,
+            0.23
+        ]
+    },
+    "seayard__2": {
+        "pixelsPerUnit": 1500,
+        "pivot": [
+            0.5,
+            0.23
+        ]
+    },
+    "seayard__3": {
+        "pixelsPerUnit": 1500,
+        "pivot": [
+            0.5,
+            0.23
+        ]
+    },
+    "seayard__4": {
+        "pixelsPerUnit": 1500,
+        "pivot": [
+            0.5,
+            0.23
+        ]
+    },
+    "seayard__5": {
+        "pixelsPerUnit": 1500,
+        "pivot": [
+            0.5,
+            0.23
+        ]
+    },
+    "seayard__6": {
+        "pixelsPerUnit": 1500,
+        "pivot": [
+            0.5,
+            0.23
+        ]
+    },
+    "seayard__7": {
+        "pixelsPerUnit": 1500,
+        "pivot": [
+            0.5,
+            0.23
+        ]
+    },
+    "seayard__8": {
+        "pixelsPerUnit": 1500,
+        "pivot": [
+            0.5,
+            0.23
+        ]
+    },
+    "boat_stinger__": {
+        "pixelsPerUnit": 1600,
+        "pivot": [
+            0.5,
+            0.5
+        ]
+    },
+    "boat_tint_stinger__": {
+        "pixelsPerUnit": 1600,
+        "pivot": [
+            0.5,
+            0.5
+        ]
+    },
+    "boat_stinger_outline__": {
+        "pixelsPerUnit": 1300,
+        "pivot": [
+            0.5,
+            0.5
+        ]
+    },
+    "weapon_club_longship__": {
+        "pixelsPerUnit": 1400,
+        "pivot": [
+            0.55,
+            0.65
+        ]
+    },
+    "weapon_club_longship_outline__": {
+        "pixelsPerUnit": 1250,
+        "pivot": [
+            0.55,
+            0.62
+        ]
+    },
+    "body_longship__": {
+        "pixelsPerUnit": 1300,
+        "pivot": [
+            0.52,
+            0.6
+        ]
+    },
+    "body_tint_longship__": {
+        "pixelsPerUnit": 1300,
+        "pivot": [
+            0.52,
+            0.6
+        ]
+    },
+    "body_longship_outline__": {
+        "pixelsPerUnit": 1100,
+        "pivot": [
+            0.52,
+            0.6
+        ]
+    },
+    "boat_ballistaboat__": {
+        "pixelsPerUnit": 1600,
+        "pivot": [
+            0.5,
+            0.5
+        ]
+    },
+    "boat_tint_ballistaboat__": {
+        "pixelsPerUnit": 1600,
+        "pivot": [
+            0.5,
+            0.5
+        ]
+    },
+    "boat_ballistaboat_outline__": {
+        "pixelsPerUnit": 1450,
+        "pivot": [
+            0.5,
+            0.5
+        ]
+    },
+    "body_bumperboat__": {
+        "pixelsPerUnit": 1400,
+        "pivot": [
+            0.5,
+            0.48
+        ]
+    },
+    "body_tint_bumperboat__": {
+        "pixelsPerUnit": 1400,
+        "pivot": [
+            0.5,
+            0.48
+        ]
+    },
+    "body_bumperboat_outline__": {
+        "pixelsPerUnit": 1300,
+        "pivot": [
+            0.5,
+            0.48
+        ]
+    }
+}
